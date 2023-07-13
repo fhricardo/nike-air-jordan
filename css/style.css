@@ -235,8 +235,8 @@ main {
 }
 
 .choice {
-    width: 80px;
-    height: 80px;
+    width: 128px;
+    height: 128px;
     border-radius: 4px;
     overflow: hidden;
     border: 1px solid var(--gray);
@@ -249,10 +249,6 @@ main {
     border: 1px solid var(--dark-gray);
     transition: .5s;
 }
-
-/* .selected {
-    border: 1px solid var(--black);
-} */
 
 .choice img {
     width: 100%;
@@ -370,8 +366,96 @@ main {
     transition: 0.5s;
 }
 
+.share {
+    width: 100%;
+    font-size: 14px;
+}
+
+.share a:link,
+.share a:visited {
+    color: var(--dark-gray);
+    text-decoration: none;
+}
+
+.share a:hover {
+    color: var(--black);
+}
+
+.share i {
+    margin: 0 4px;
+}
+
+.about,
+.benefits {
+    width: 100%;
+    padding: 16px 0;
+}
+
+.benefits .trigger {
+    display: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.benefits ul {
+    margin-left: 32px;
+    padding-right: 32px;
+}
+
+.benefits label h3 {
+    width: 128px;
+}
+
+.benefits label h3::after {
+    content: "+";
+    float: right;
+    transition: transform .5s;
+}
+
+.benefits .benefit-det {
+    display: none;
+}
+
+.benefits .trigger:checked+.benefits-text .benefit-det {
+    display: block;
+}
+
+.benefits .trigger:checked+.benefits-text h3::after {
+    transform: rotate(45deg);
+}
 
 footer {
     width: 100%;
+    min-height: 200px;
     background-color: var(--black);
+    color: var(--gray);
+}
+
+.footer-contents {
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    font-weight: 300;
+}
+
+.footer-contents ul {
+    width: 296px;
+    margin: 32px 0;
+}
+
+.footer-contents ul li {
+    list-style-type: none;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.footer-contents h4 {
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.footer-contents i {
+    margin-right: 16px;
 }
