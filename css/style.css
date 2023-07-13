@@ -11,6 +11,7 @@
     --dark-gray: #676767;
     --light-gray: #909090;
     --black: #111111;
+    --blue: #a1b9f7;
 }
 
 h1,
@@ -25,6 +26,7 @@ h6 {
 body {
     background-color: var(--white);
 }
+
 
 header {
     width: 100%;
@@ -166,6 +168,16 @@ main {
 
 .large img {
     width: 100%;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+}
+
+.large img:hover {
+    transform: scale(120%) rotate(10deg);
+    -webkit-transform: scale(120%) rotate(10deg);
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    cursor: pointer;
 }
 
 .thumbs {
@@ -227,15 +239,20 @@ main {
     height: 80px;
     border-radius: 4px;
     overflow: hidden;
+    border: 1px solid var(--gray);
+    transition: 0.5s;
+
+
 }
 
 .choice:hover {
     border: 1px solid var(--dark-gray);
+    transition: .5s;
 }
 
-.selected {
+/* .selected {
     border: 1px solid var(--black);
-}
+} */
 
 .choice img {
     width: 100%;
@@ -245,14 +262,19 @@ main {
     width: 100%;
 }
 
-.size ul {
+.size {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
 
-.size ul li {
+.size h3 {
+    width: 100%;
+    color: var(--dark-gray);
+}
+
+.size label {
     width: 70px;
     height: 50px;
     border: 1px solid var(--light-gray);
@@ -260,8 +282,94 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--dark-gray);
+    cursor: pointer;
+}
+
+.size input[type="radio"][disabled]+label {
+    border: 1px solid var(--gray);
+    color: var(--light-gray);
+    background-color: var(--gray);
+    cursor: not-allowed;
+}
+
+.size input[type="radio"][disabled]+label::before {
+    content: '';
+    width: 80px;
+    height: 0px;
+    border-top: 1px solid var(--dark-gray);
+    transform: rotate(35deg);
+    position: absolute;
 
 }
+
+.size input[type="radio"]:checked+label {
+    border: 1px solid var(--black);
+    color: var(--black);
+    background-color: var(--gray);
+    cursor: pointer;
+    box-shadow: 0px 0px 8px var(--blue);
+    transition: 0.5s;
+}
+
+.size .trigger {
+    display: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 32px 0;
+}
+
+.buttons a:link {
+    width: 308px;
+    height: 64px;
+    border-radius: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.buttons i {
+    margin-left: 8px;
+}
+
+.buttons a.cart:link,
+.buttons a.cart:visited {
+    background-color: var(--black);
+    border: 1px solid var(--black);
+    color: var(--white);
+    transition: 0.5s;
+}
+
+.buttons a.cart:hover {
+    background-color: var(--dark-gray);
+    border: 1px solid var(--dark-gray);
+    color: var(--white);
+    transition: 0.5s;
+}
+
+.buttons a.fav:link,
+.buttons a.fav:visited {
+    background-color: var(--white);
+    border: 1px solid var(--black);
+    color: var(--black);
+    transition: 0.5s;
+}
+
+.buttons a.fav:hover {
+    background-color: var(--gray);
+    border: 1px solid var(--dark-gray);
+    color: var(--dark-gray);
+    transition: 0.5s;
+}
+
 
 footer {
     width: 100%;
