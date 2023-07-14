@@ -456,6 +456,10 @@ footer {
     line-height: 24px;
 }
 
+.footer-contents ul li:hover {
+    cursor: pointer;
+}
+
 .footer-contents h4 {
     font-size: 16px;
     margin-bottom: 16px;
@@ -463,4 +467,35 @@ footer {
 
 .footer-contents i {
     margin-right: 16px;
+}
+
+.credits {
+    width: 1280px;
+    height: 100px;
+    margin: 0 auto;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--light-gray);
+}
+
+.credits ul {
+    width: fit-content;
+    display: flex;
+    gap: 64px;
+}
+
+.credits ul li {
+    list-style-type: none;
+}
+
+.credits ul li a:link,
+.credits ul li a:visited {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+.credits ul li a:hover {
+    color: var(--white);
 }
