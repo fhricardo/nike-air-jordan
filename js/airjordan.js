@@ -1,3 +1,8 @@
+/*******************************************************************************
+©2023 - Flavio Ricardo
+JS - Nike Air Jordan - Educational Project
+Webdesign Front-end
+*******************************************************************************/
 document.addEventListener("contextmenu", (event) => {
     event.preventDefault();
 });
